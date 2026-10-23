@@ -24,10 +24,10 @@ which need an internet connection to load.
 
 ## Where it's live
 
-**https://harryhartnz-hue.github.io**
+**https://harry-hart-nz.github.io**
 
 Hosted free on GitHub Pages from this repo:
-github.com/harryhartnz-hue/harryhartnz-hue.github.io
+github.com/harry-hart-nz/harry-hart-nz.github.io
 
 Anyone can open that link. No account, no Claude subscription.
 
@@ -54,7 +54,7 @@ Buy a domain anywhere (Namecheap, Porkbun, Cloudflare). Then:
 2. At your domain registrar, add four A records for the bare domain
    pointing at `185.199.108.153`, `185.199.109.153`,
    `185.199.110.153`, `185.199.111.153`, and a CNAME record for `www`
-   pointing at `harryhartnz-hue.github.io`.
+   pointing at `harry-hart-nz.github.io`.
 3. In the repo's Settings → Pages, tick "Enforce HTTPS" once the
    certificate is issued (can take up to an hour).
 
