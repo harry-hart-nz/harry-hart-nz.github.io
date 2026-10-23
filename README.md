@@ -1,6 +1,6 @@
-# Harry Hart — Portfolio (exported site)
+# Harry Hart, portfolio site
 
-This is a plain, static website — just HTML, CSS and images. No build tools,
+This is a plain, static website: just HTML, CSS and images. No build tools,
 no frameworks, no Claude account required. It works on desktop, tablet and
 mobile out of the box (try resizing your browser, or open it on your phone).
 
@@ -18,32 +18,49 @@ images/         All photos and screenshots, already compressed for the web
 
 ## Preview it locally
 
-Double-click `index.html` to open it in a browser — everything works
+Double-click `index.html` to open it in a browser. Everything works
 offline except the two Google Fonts (Anton, Space Grotesk, Space Mono),
 which need an internet connection to load.
 
-## Put it on a real domain (free hosting)
+## Where it's live
 
-The easiest path, no coding required:
+**https://harryhartnz-hue.github.io**
 
-1. **Netlify** — go to app.netlify.com/drop and drag the whole
-   `site-export` folder onto the page. It's live at a `*.netlify.app`
-   URL in seconds. Add a custom domain for free under Site settings →
-   Domain management.
-2. **Vercel** — similar drag-and-drop flow at vercel.com/new, or
-   `npx vercel` from inside this folder if you're comfortable with a
-   terminal.
-3. **GitHub Pages** — push this folder to a GitHub repo, then turn on
-   Pages in the repo's Settings tab. Free, and pairs well with a
-   custom domain bought elsewhere (Namecheap, Google Domains, etc.).
+Hosted free on GitHub Pages from this repo:
+github.com/harryhartnz-hue/harryhartnz-hue.github.io
 
-Any of these gets you a real, permanent URL you can point a domain
-like `harrisonhart.com` at — no Claude subscription needed for anyone
-to view it.
+Anyone can open that link. No account, no Claude subscription.
+
+## Publishing a change
+
+This folder is a git repo, so every change is versioned and any change
+can be undone. Edit the files, then:
+
+```
+git add .
+git commit -m "describe what you changed"
+git push
+```
+
+The live site updates about a minute later. To undo the last change:
+`git revert HEAD` then `git push`.
+
+## Using your own domain
+
+Buy a domain anywhere (Namecheap, Porkbun, Cloudflare). Then:
+
+1. Create a file in this folder called `CNAME` containing just the
+   domain, e.g. `harryhart.co.nz`. Commit and push it.
+2. At your domain registrar, add four A records for the bare domain
+   pointing at `185.199.108.153`, `185.199.109.153`,
+   `185.199.110.153`, `185.199.111.153`, and a CNAME record for `www`
+   pointing at `harryhartnz-hue.github.io`.
+3. In the repo's Settings → Pages, tick "Enforce HTTPS" once the
+   certificate is issued (can take up to an hour).
 
 ## Editing it yourself
 
 Everything is plain HTML/CSS, so you can open the files in any code
 editor (VS Code is a good free option) and change text directly in the
 `.html` files. Shared colors, fonts and spacing all live in
-`css/style.css` — change a value there and it updates every page.
+`css/style.css`, so changing a value there updates every page.
